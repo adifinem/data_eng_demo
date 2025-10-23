@@ -1,0 +1,7 @@
+
+name: "spaceweather"
+version: "1.0"
+config-version: 2
+profile: "spaceweather"
+model-paths: ["models"]
+

@@ -1,0 +1,1 @@
+{"_invocation_id": "9fe8ecae-abc6-419e-936f-e06788f38164", "linked": {"0": {"name": "model.spaceweather.gold__messages", "type": "model"}, "1": {"name": "model.spaceweather.gold__hapi_timeseries", "type": "model"}, "2": {"name": "model.spaceweather.silver__hapi_measurements", "type": "model", "succ": [1]}}}

@@ -1,0 +1,108 @@
+{
+  "HAPI": "3.1",
+  "cadence": "PT1M",
+  "contact": "",
+  "contactID": "",
+  "creationDate": "2023-08-23T09:43:49.537789Z",
+  "description": "Real time solar wind magnetic field from active satellite",
+  "id": "solar_wind_mag_rt",
+  "modificationDate": "2025-10-23T06:00:12.153965Z",
+  "parameters": [
+    {
+      "description": "Time",
+      "fill": "",
+      "name": "time",
+      "type": "isotime",
+      "units": "UTC"
+    },
+    {
+      "description": "bt",
+      "fill": "-1e30",
+      "name": "bt",
+      "type": "double",
+      "units": "nT"
+    },
+    {
+      "description": "bx_gsm",
+      "fill": "-1e30",
+      "name": "bx_gsm",
+      "type": "double",
+      "units": "nT"
+    },
+    {
+      "description": "by_gsm",
+      "fill": "-1e30",
+      "name": "by_gsm",
+      "type": "double",
+      "units": "nT"
+    },
+    {
+      "description": "bz_gsm",
+      "fill": "-1e30",
+      "name": "bz_gsm",
+      "type": "double",
+      "units": "nT"
+    }
+  ],
+  "resourceID": "NOAA Space Weather Prediction Center",
+  "resourceURL": "https://services.swpc.noaa.gov/products/solar-wind/",
+  "sampleStartDate": "",
+  "sampleStopDate": "",
+  "startDate": "2021-08-24T23:50:00.000000Z",
+  "status": {
+    "code": 1200,
+    "message": "HAPI 1200: OK"
+  },
+  "stopDate": "2025-10-23T05:58:00.000000Z",
+  "timeStampLocation": "begin",
+  "x_relations": [
+    {
+      "add": "automatic",
+      "cadence": "PT5M",
+      "description": "Real time solar wind magnetic field from active satellite downsampled to 5 minutes",
+      "id": "solar_wind_mag_rt_PT5M",
+      "method": "mean",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "PT30M",
+      "description": "Real time solar wind magnetic field from active satellite downsampled to 30 minutes",
+      "id": "solar_wind_mag_rt_PT30M",
+      "method": "mean",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "PT3H",
+      "description": "Real time solar wind magnetic field from active satellite downsampled to 3 hours",
+      "id": "solar_wind_mag_rt_PT3H",
+      "method": "mean",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "PT12H",
+      "description": "Real time solar wind magnetic field from active satellite downsampled to 12 hours",
+      "id": "solar_wind_mag_rt_PT12H",
+      "method": "mean",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "P3D",
+      "description": "Real time solar wind magnetic field from active satellite downsampled to 3 days",
+      "id": "solar_wind_mag_rt_P3D",
+      "method": "mean",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "P10D",
+      "description": "Real time solar wind magnetic field from active satellite downsampled to 10 days",
+      "id": "solar_wind_mag_rt_P10D",
+      "method": "mean",
+      "type": "resample"
+    }
+  ]
+}

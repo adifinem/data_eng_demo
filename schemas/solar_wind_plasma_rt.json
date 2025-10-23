@@ -1,0 +1,108 @@
+{
+  "HAPI": "3.1",
+  "cadence": "PT1M",
+  "contact": "",
+  "contactID": "",
+  "creationDate": "2023-08-23T08:51:46.383990Z",
+  "description": "Real time solar wind plasma from active satellite",
+  "id": "solar_wind_plasma_rt",
+  "modificationDate": "2025-10-23T06:00:24.783301Z",
+  "parameters": [
+    {
+      "description": "Time",
+      "fill": "",
+      "name": "time",
+      "type": "isotime",
+      "units": "UTC"
+    },
+    {
+      "description": "Density",
+      "fill": "-1e30",
+      "name": "density",
+      "type": "double",
+      "units": "1/cm3"
+    },
+    {
+      "description": "Speed",
+      "fill": "-1e30",
+      "name": "speed",
+      "type": "double",
+      "units": "km/s"
+    },
+    {
+      "description": "Temperature",
+      "fill": "-1e30",
+      "name": "temperature",
+      "type": "double",
+      "units": "K"
+    },
+    {
+      "description": "Pressure",
+      "fill": "-1e30",
+      "name": "pressure",
+      "type": "double",
+      "units": "nPa"
+    }
+  ],
+  "resourceID": "NOAA Space Weather Prediction Center",
+  "resourceURL": "https://services.swpc.noaa.gov/products/solar-wind/",
+  "sampleStartDate": "",
+  "sampleStopDate": "",
+  "startDate": "2021-08-24T23:50:00.000000Z",
+  "status": {
+    "code": 1200,
+    "message": "HAPI 1200: OK"
+  },
+  "stopDate": "2025-10-23T05:59:00.000000Z",
+  "timeStampLocation": "begin",
+  "x_relations": [
+    {
+      "add": "automatic",
+      "cadence": "PT5M",
+      "description": "Real time solar wind plasma from active satellite downsampled to 5 minutes",
+      "id": "solar_wind_plasma_rt_PT5M",
+      "method": "mean",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "PT30M",
+      "description": "Real time solar wind plasma from active satellite downsampled to 30 minutes",
+      "id": "solar_wind_plasma_rt_PT30M",
+      "method": "mean",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "PT3H",
+      "description": "Real time solar wind plasma from active satellite downsampled to 3 hours",
+      "id": "solar_wind_plasma_rt_PT3H",
+      "method": "mean",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "PT12H",
+      "description": "Real time solar wind plasma from active satellite downsampled to 12 hours",
+      "id": "solar_wind_plasma_rt_PT12H",
+      "method": "mean",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "P3D",
+      "description": "Real time solar wind plasma from active satellite downsampled to 3 days",
+      "id": "solar_wind_plasma_rt_P3D",
+      "method": "mean",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "P10D",
+      "description": "Real time solar wind plasma from active satellite downsampled to 10 days",
+      "id": "solar_wind_plasma_rt_P10D",
+      "method": "mean",
+      "type": "resample"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "HAPI": "3.1",
+  "cadence": "PT3H",
+  "contact": "",
+  "contactID": "",
+  "creationDate": "2023-09-29T15:20:30.116793Z",
+  "description": "Geomagnetic Kp index",
+  "id": "kp_index",
+  "modificationDate": "2025-10-23T05:54:59.981484Z",
+  "parameters": [
+    {
+      "description": "Time",
+      "fill": "",
+      "label": "Time",
+      "name": "time",
+      "type": "isotime",
+      "units": "UTC"
+    },
+    {
+      "description": "Geomagnetic Kp index",
+      "fill": "-9999.0",
+      "label": "Hp30",
+      "name": "Kp",
+      "type": "double",
+      "units": ""
+    }
+  ],
+  "resourceID": "GFZ Potsdam",
+  "resourceURL": "https://www.gfz-potsdam.de/en/hpo-index/",
+  "sampleStartDate": "",
+  "sampleStopDate": "",
+  "startDate": "1932-01-01T00:00:00.000000Z",
+  "status": {
+    "code": 1200,
+    "message": "HAPI 1200: OK"
+  },
+  "stopDate": "2025-10-23T03:00:00.000000Z",
+  "timeStampLocation": "begin",
+  "x_relations": [
+    {
+      "add": "automatic",
+      "cadence": "P1D",
+      "description": "Geomagnetic Kp index, downsampled maximum over 1 day",
+      "id": "kp_index_P1D",
+      "method": "max",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "P7D",
+      "description": "Geomagnetic Kp index, downsampled maximum over 7 days",
+      "id": "kp_index_P7D",
+      "method": "max",
+      "type": "resample"
+    },
+    {
+      "add": "automatic",
+      "cadence": "P31D",
+      "description": "Geomagnetic Kp index, downsampled maximum over 31 days",
+      "id": "kp_index_P31D",
+      "method": "max",
+      "type": "resample"
+    }
+  ]
+}
