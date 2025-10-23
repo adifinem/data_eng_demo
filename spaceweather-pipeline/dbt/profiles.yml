@@ -1,9 +1,0 @@
-
-spaceweather:
-  outputs:
-    dev:
-      type: duckdb
-      path: /warehouse/spaceweather.duckdb
-      threads: 4
-  target: dev
-

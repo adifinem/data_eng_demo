@@ -1,8 +1,0 @@
-requests
-kafka-python-ng
-tenacity
-python-dateutil
-PyYAML
-uvicorn
-fastapi
-statsd
