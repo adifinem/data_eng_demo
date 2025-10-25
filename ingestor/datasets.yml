@@ -5,22 +5,21 @@ default_window: PT10M   # per-request span if dataset.window not provided
 datasets:
   - id: solar_wind_mag_rt
     scope: rt
-    parameters: [time, Bx, By, Bz, Bt]
+    parameters: ["*"]
     window: PT10M
 
   - id: kp_index
     scope: rt
-    parameters: [time, kp]
+    parameters: ["*"]
     window: PT6H
 
   - id: solar_wind_plasma_rt
     scope: rt
-    parameters: [time, V, Np, T]
+    parameters: ["*"]
     window: PT10M
 
   # Calibrated science backfill (optional for v1)
   - id: solar_wind_mag_ace_science
     scope: science
-    parameters: [time, Bx, By, Bz, Bt]
+    parameters: ["*"]
     window: PT1H
-

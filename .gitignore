@@ -1,0 +1,10 @@
+venv/*
+**/__pycache__/**
+*.pyc
+*.log
+*.gpickle
+.env*
+observability/logs/pipeline_events.log
+observability/logs/*.log
+dbt/spaceweather/target/*.json
+dbt/spaceweather/logs/*

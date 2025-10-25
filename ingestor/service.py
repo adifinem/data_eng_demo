@@ -287,6 +287,7 @@ class Ingestor:
         topic = f"hapi.{dataset_id}.{scope}"
         max_time = None
         sent = 0
+        send_failed = False
 
         for row in rows:
             tstr = row.get("time") or row.get("Time") or row.get("TimeUTC")
@@ -315,6 +316,7 @@ class Ingestor:
                     max_time = tdt
             except Exception as e:
                 log.warning(f"Kafka send failed: {e}")
+                send_failed = True
                 break
 
         self.kfk.flush()
@@ -329,7 +331,7 @@ class Ingestor:
             "tmax": tmax,
             "last_time": to_iso(max_time) if max_time else None,
         }
-        status = "success" if sent else "success"
+        status = "success" if sent and not send_failed else "failure"
         self.log_event(
             f"dataset={dataset_id} sent={sent} topic={topic} last_time={summary['last_time']}",
             status=status,

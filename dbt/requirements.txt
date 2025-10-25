@@ -1,8 +1,3 @@
-fastapi
-uvicorn
-kafka-python-ng
-requests
 dbt-core
 dbt-duckdb
 duckdb
-
