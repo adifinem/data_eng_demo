@@ -6,5 +6,6 @@ venv/*
 .env*
 observability/logs/pipeline_events.log
 observability/logs/*.log
-dbt/spaceweather/target/*.json
+dbt/spaceweather/target/*
 dbt/spaceweather/logs/*
+dbt/.user.yml
