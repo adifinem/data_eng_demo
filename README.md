@@ -1,6 +1,14 @@
+
+I created this in an afternoon. I did utilize GPT-5-codex, but in a very engaged, hands-on way, with heavy guidance and correction. Just less carpel tunnel.
+
+It's a bare bones full stack data ingestion pipeline demo to show the full process and use as demo and template. The documentation below is all LLM generated.
+
+Also spaceweather APIs are pretty cool. HAPI is a nicely standardized and well-documented REST protocol, so is itself a good model of how to make a solid, discoverable public API that's self-documenting and automation friendly. This demo is very rudamentary, the observability configs need tweaks, and it's over-engineered for what it is, to illustrate concepts rather than be practical, but there's a lot of potential hiding in what it's doing.
+
+
 # Spaceweather Pipeline
 
-A laptop-friendly spaceweather stack that does two things:
+A toy spaceweather stack that does two things:
 
 1. **Health check loop** – a FastAPI stub emits a heartbeat message every five minutes so you can confirm the Airflow ⇢ Kafka ⇢ Spark ⇢ dbt ⇢ FastAPI ⇢ Streamlit loop works end to end.
 2. **Real HAPI ingest** – the same pipeline polls the KNMI Space Weather HAPI endpoints defined in `ingestor/datasets.yml`, streams them into Kafka (`hapi.*` topics), lands the data in `/datalake/bronze/hapi`, models it with dbt/DuckDB, and surfaces simple charts in Streamlit.
